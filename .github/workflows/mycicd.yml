@@ -27,7 +27,7 @@ jobs:
           chmod 600 ~/.ssh/staging.key
           cat >>~/.ssh/config <<END
           Host staging
-            HostName "ec2-13-232-47-69.ap-south-1.compute.amazonaws.com"
+            HostName "13.232.47.69"
             User cicd
             IdentityFile ~/.ssh/staging.key
             StrictHostKeyChecking no
