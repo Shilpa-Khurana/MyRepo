@@ -10,22 +10,22 @@ jobs:
   pullcicd:
     runs-on: ubuntu-latest
      steps:
-      - name: workflow started
-        run: echo "Workflow started"
+     - name: workflow started
+       run: echo "Workflow started"
 
-      - name: ssh into server
-        run: | 
-          echo "This step will always run"
+     - name: ssh into server
+       run: | 
+         echo "This step will always run"
 
 
-      - name: executing ssh
-        uses: appleboy/ssh-action@master
-        with: 
-          host: "ec2-43-205-94-34.ap-south-1.compute.amazonaws.com"
-          username: cicd
-          password: cicd1234
-          script: bash /var/www/cicd.sh
+     - name: executing ssh
+       uses: appleboy/ssh-action@master
+       with: 
+         host: "ec2-43-205-94-34.ap-south-1.compute.amazonaws.com"
+         username: cicd
+         password: cicd1234
+         script: bash /var/www/cicd.sh
 
-      - name: workflow completed
-        run: echo "check server output" 
+     - name: workflow completed
+       run: echo "check server output" 
 
