@@ -32,6 +32,9 @@ jobs:
             IdentityFile ~/.ssh/staging.key
             StrictHostKeyChecking no
           END
+      
+      - name: Running 
+        run: ssh staging 'echo $USER'
 
       - name: Running gitpull
         run: ssh staging 'bash /var/www/cicd.sh'
