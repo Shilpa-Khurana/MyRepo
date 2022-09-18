@@ -16,7 +16,10 @@ jobs:
       - name: ssh into server
         run: | 
           echo "This step will always run"
-
+        
+      - name: checkout
+        uses: actions/checkout@v2
+        
       - name: Configure SSH
         run: |
           mkdir -p ~/.ssh/
